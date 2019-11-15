@@ -12,7 +12,7 @@ justify-content: space-between;
 height: 5rem;
 
 & a {
-    color: #dfe6e9;
+    color: #69C8ECFF;
     text-transform: uppercase;
     font-weight: 600;
     border-bottom: 1px solid transparent;
@@ -22,7 +22,7 @@ height: 5rem;
     cursor: pointer;
 
     &:hover {
-      color: #fdcb6e;
+      color: #E762D7FF;
      
     }
    
