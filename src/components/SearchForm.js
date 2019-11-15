@@ -4,35 +4,56 @@ import axios from "axios";
 
 
 const SearchForm = (props) => {
-  
-  const [form, changeForm] = useState('');
-  const [result, submitResult] = useEffect ([]);
 
+  const[currentForm, changeForm] = useState('');
+  const[searchResult, submitResult] = useState([]);
 
-  useEffect (() => {
-    axios.get('https://rickandmortyapi.com/api/character/')
-    .then (responce => {
+useEffect (() => {
+
+  axios.get('https://rickandmortyapi.com/api/character/')
+      .then(responce => {
       console.log(responce.data.results);
       const characters = responce.data.results;
-      const results = characters.filter(character  =>   {
-        return character.name.toLowerCase().includes(currentForm.toLowerCase());
-      
-    })
+      const results =characters.filter(character => {
+          return character.name.toLowerCase().includes(currentForm.toLowerCase());
+      })
 
-        submitResults(results);
+              submitResult(results);
+      })
 
-    })
+      .catch(error => {
+          console.log(error);
+      })
+                
+     
 
-    .catch(error => {
-      console.log(error);
-    })
+  }, [currentForm])
 
-  }, [form])
+  const onFormChange = event => {
+      changeForm(event.target.value)
+      console.log(currentForm)
+  }
 
   return (
-    <section className="search-form">
-     
-    </section>
+      
+      <form className = "search-form">
+          <input
+              type='text'
+              placeholder='search'
+              onChange={onFormChange}
+          />
+
+          {
+              searchResult.map((people, index) => {
+                  return(
+                      <CharacterCard key={index} people={people}/>
+                  )
+              })
+          }
+
+          
+      </form>
+      
   );
 }
 
