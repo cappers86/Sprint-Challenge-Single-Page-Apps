@@ -9,9 +9,9 @@ const CharacterCard = (props)  => {
     
     <StyledCard>
     <h1>{props.people.name}</h1>
-  <h2>gender:{props.people.gender}</h2>
-  <h2>species:{props.people.species}</h2>
-  <h2>status:{props.people.status}</h2>
+  <h2>Gender:{props.people.gender}</h2>
+  <h2>Species:{props.people.species}</h2>
+  <h2>Status:{props.people.status}</h2>
   <img src={`${props.people.image}`} alt=""/>
       </StyledCard>
   );

@@ -10,6 +10,7 @@ export default function App() {
   return (
     <main>
       <Nav />
+      <Header />
       <Route exact path='/' component={WelcomePage} />
       <Route exact path='/Characters' component={CardList} />
       <Route exact path='/Search' component={SearchForm} />

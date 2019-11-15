@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import CharacterCard from './CharacterCard';
 import axios from "axios";
+import StyledSearch from "./StyledSearch";
+
 
 
 const SearchForm = (props) => {
@@ -37,12 +39,14 @@ useEffect (() => {
   return (
       
       <form className = "search-form">
+          
+         <StyledSearch>
           <input
               type='text'
               placeholder='search'
               onChange={onFormChange}
           />
-
+            </StyledSearch>
           {
               searchResult.map((people, index) => {
                   return(

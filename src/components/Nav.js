@@ -1,5 +1,6 @@
 import React from 'react';
 import StyledNav from './StyledNav';
+import Header from './Header';
 import  {  Link } from 'react-router-dom';
 
 export default function Nav() {
@@ -7,6 +8,7 @@ export default function Nav() {
         
         
         <StyledNav>
+            
         <Link to="/">Home</Link>
         
         <Link to="/Characters">Card List</Link>
