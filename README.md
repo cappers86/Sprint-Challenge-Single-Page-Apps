@@ -25,9 +25,11 @@ In this challenge, you will create a Single Page Application complete with Clien
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
-- [ ]  Explain benefit(s) using `client-side routing`?
+- [x]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: 
+
+Firstly we need to ask what is routing, routing is simply a way in which requests are connected to some code, this in turn allows us navigate through are website or application. The benefits of CSR is mainly the speed in which it allows us to process data this is possible mainly in part due to the fact that there is less data. Along with the speed also comes the ease of transitions as well as animations between views which makes them easier to implement.
 
 ## Project Set Up
 
